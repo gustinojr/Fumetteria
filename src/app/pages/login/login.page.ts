@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  loginForm= new FormGroup({
+     email: new FormControl(),
+    password: new FormControl(),
+  });
+mail:string[]=[];
+password:any[]=[];
 
-  ngOnInit() {
-  }
+constructor() {}
 
+  ngOnInit() {}
+updateProfile(){
+  this.loginForm.setValue({
+    email:[''],
+    password:[''],
+    })
+  
+}
 }

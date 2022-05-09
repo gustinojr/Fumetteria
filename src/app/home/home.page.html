@@ -10,9 +10,7 @@
     <ion-row>
       <ion-col></ion-col>
       <ion-col>
-        <div class="ion-text-center">
-          <img src="/assets/icon/logo_devskill.png">
-        </div>
+      <app-titolo-dev-skill></app-titolo-dev-skill>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
@@ -27,7 +25,7 @@
     <ion-row>
       <ion-col></ion-col>
       <ion-col class="ion-text-center">
-        <ion-button >Get Started!</ion-button>
+        <ion-button [routerLink]="['/login']">Get Started!</ion-button>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
