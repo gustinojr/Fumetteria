@@ -22,7 +22,8 @@
         <ion-col>
           <ion-item>
             <ion-label for="email" position="floating">Email</ion-label>
-            <ion-input id="email" formControlName="email"> </ion-input>
+            <ion-input type="email" id="email" formControlName="email" [(ngModel)]="email"> </ion-input>
+
             <ion-icon slot="end" name="mail"></ion-icon>
           </ion-item>
         </ion-col>
@@ -35,7 +36,8 @@
         <ion-col>
           <ion-item>
             <ion-label for="password" position="floating">Password</ion-label>
-            <ion-input type="password" id="password" minlength="8" formControlName="password"></ion-input>
+            <ion-input type="password" id="password" formControlName="password" [(ngModel)]="password"></ion-input>
+
             <ion-icon slot="end" name="lock-closed"></ion-icon>
           </ion-item>
         </ion-col>
@@ -52,7 +54,7 @@
         </ion-col>
         <ion-col>
           <div class="ion-float-left">
-            <ion-button (click)="updateProfile()">LOGIN</ion-button>
+            <ion-button [disabled]="!loginForm.valid" (click)="authentication()">LOGIN</ion-button>
           </div>
         </ion-col>
         <ion-col></ion-col>
